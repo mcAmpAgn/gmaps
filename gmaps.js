@@ -14,7 +14,7 @@
 }(this, function() {
 
 /*!
- * GMaps.js v0.4.24
+ * GMaps.js v0.4.25 -> FORK
  * http://hpneo.github.com/gmaps/
  *
  * Copyright 2016, Gustavo Leon
