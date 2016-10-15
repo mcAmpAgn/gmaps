@@ -825,6 +825,18 @@ GMaps.prototype.createMarker = function(options) {
     if (marker.infoWindow) {
       self.hideInfoWindows();
       marker.infoWindow.open(self.map, marker);
+      if (options.infoWindow_Ajax != undefined){
+          $.ajax({
+              type: "GET",
+              url: options.infoWindow_Ajax,
+              success: function (data) {
+                  marker.infoWindow.setContent(data);
+              },
+              error: function () {
+                  console.log("Error gets info from " + options.infoWindows_Ajax);
+              }
+          });
+      }
     }
   });
 
